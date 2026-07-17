@@ -119,3 +119,13 @@ jobs:
           fail-on-ci-drift: true
           comment-pr: false
           artifact-name: ota-contract-ci-drift
+
+  demonstration-bootstrap-drift:
+    if: ${{ false }}
+    name: Intentional bootstrap drift demonstration
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ota-run/setup@v1.0.8
+        with:
+          source: version
+          version: v1.6.24
